@@ -14,8 +14,7 @@ export default class Product extends Component {
             {(value) => (
               <div
                 className="img-container p-5"
-                onClick={() => value.handleDetail(id)
-                }
+                onClick={() => value.handleDetail(id)}
               >
                 <Link to="/details">
                   <img src={img} alt="" className="card-img-top" />
@@ -34,8 +33,8 @@ export default class Product extends Component {
                       in cart
                     </p>
                   ) : (
-                      <i className="fas fa-cart-plus" />
-                    )}
+                    <i className="fas fa-cart-plus" />
+                  )}
                 </button>
               </div>
             )}
@@ -44,8 +43,7 @@ export default class Product extends Component {
           <div className=" card-footer d-flex justify-content-between">
             <p className="align-self-center mb-0">{title}</p>
             <h5 className="text-blue font-italic mb-0">
-              <span className="mr-1">$</span>
-              {price}
+              {price} <span className="mr-1">cfa</span>
             </h5>
           </div>
         </div>

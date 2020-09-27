@@ -19,15 +19,15 @@ export default function CartTotals({ value, history }) {
             </Link>
             <h5>
               <span className="title-text">subtotal :</span>
-              <strong>$ {cartSubTotal}</strong>
+              <strong> {cartSubTotal} cfa</strong>
             </h5>
             <h5>
               <span className="title-text">tax :</span>
-              <strong>$ {cartTax}</strong>
+              <strong> {cartTax} cfa</strong>
             </h5>
             <h5>
               <span className="title-text">total :</span>
-              <strong>$ {cartTotal}</strong>
+              <strong> {cartTotal} cfa</strong>
             </h5>
           </div>
         </div>
