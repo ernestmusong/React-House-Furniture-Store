@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
 import styled from "styled-components";
+// import Cart from "./Cart/Cart";
+import { ProductConsumer } from "../context";
 
-import { ButtonContainer } from "./Button";
+// import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
+ 
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
@@ -19,12 +22,23 @@ export default class Navbar extends Component {
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
-            <span className="mr-2">
+          <div className="cart-wrapper">
+            <span className="cart-icon">
               <i className="fas fa-cart-plus" />
             </span>
-            my cart
-          </ButtonContainer>
+            <ProductConsumer>
+                {(value) => {
+                  const allProducts =  value.cart.map((item) => {
+                   return item.count;
+                  });
+                  const allProductsCount = allProducts.reduce((sum, item) => {
+                    return sum + item;
+                  }, 0)
+                return <span className="total-items">{allProductsCount}</span> 
+                }}
+              </ProductConsumer>
+           
+          </div>
         </Link>
       </NavWrapper>
     );

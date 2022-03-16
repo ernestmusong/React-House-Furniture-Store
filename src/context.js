@@ -72,6 +72,14 @@ export default class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
+itemsCount = () => {
+ const itemsInCart =  this.state.products.map((item) => item.count);
+    const itemsTotal = itemsInCart.reduce((sum, item) => {
+      return sum + item
+    }, 0)
+    console.log(itemsTotal)
+return itemsTotal;
+}
 
   increment = (id) => {
     let tempCart = [...this.state.cart];
@@ -174,6 +182,7 @@ export default class ProductProvider extends Component {
           decrement: this.decrement,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
+          itemsCount: this.itemsCount,
         }}
       >
         {this.props.children}
