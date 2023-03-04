@@ -1,7 +1,7 @@
 export const storeProducts = [
   {
     id: 1,
-    title: "samsung s10",
+    title: "s",
     img: "img/samsung.jpg",
     company: "amazone",
     info:
@@ -49,7 +49,7 @@ export const storeProducts = [
   },
   {
     id: 5,
-    title: "iphone8 vodafone",
+    title: "vodafone",
     img: "img/vodafone.jpg",
     company: "vodafone",
     info:

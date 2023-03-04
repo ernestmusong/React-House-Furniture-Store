@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
 import styled from "styled-components";
-// import Cart from "./Cart/Cart";
 import { ProductConsumer } from "../context";
 
-// import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
- 
   render() {
     return (
-      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
-        <Link to="/">
-          <img src={logo} alt="" className="navbar-brand" />
-        </Link>
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              products
-            </Link>
-          </li>
-        </ul>
-        <Link to="/cart" className="ml-auto">
+      <NavWrapper>
+        <div className="logo-container">
+          <Link to="/">
+            <div className="logo-wrapper">
+               <img src={logo} alt="" className="navbar-brand" />
+            </div>
+            
+          </Link>
+          <ul className="navbar-nav align-items-center">
+            <li className="nav-item ml-5">
+              <Link to="/" className="nav-link">
+              All products
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <Link to="/cart" className="cart-container">
           <div className="cart-wrapper">
             <span className="cart-icon">
               <i className="fas fa-cart-plus" />
@@ -46,6 +48,11 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
   background: var(--mainBlue);
   .nav-link {
     color: var(--mainWhite) !important;

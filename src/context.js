@@ -26,9 +26,7 @@ export default class ProductProvider extends Component {
       tempProducts = [...tempProducts, singleItem];
     });
 
-    this.setState(() => {
-      return { products: tempProducts };
-    });
+    this.setState({products: tempProducts})
   };
 
   getItem = (id) => {
@@ -169,10 +167,12 @@ return itemsTotal;
       };
     });
   };
+
   render() {
     return (
       <ProductContext.Provider
-        value={{
+        value={
+          {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
@@ -182,8 +182,9 @@ return itemsTotal;
           decrement: this.decrement,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
-          itemsCount: this.itemsCount,
-        }}
+          itemsCount: this.itemsCount
+        }
+      }
       >
         {this.props.children}
       </ProductContext.Provider>
