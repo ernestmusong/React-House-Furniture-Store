@@ -1,68 +1,123 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a name="readme-top"></a>
+  <h3><b>Annual Income Report</b></h3>
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `yarn start`
+# 📖 [Annual Income Report] <a name="about-project"></a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**[Annual Income Report]** is a project at <a href='https://www.microverse.org/'>Microverse</a> module three.  It is a single page application that gives annual report on the income statements for the company "Apple Inc." for the past thirty-eight years (1985 till date)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 🛠 Built With <a name="built-with"></a>
 
-### `yarn test`
+### Tech Stack <a name="tech-stack"></a>
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="#">Reactjs</a></li>
+    <li><a href="#">Redux</a></li>
+  </ul>
+</details>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Features <a name="key-features"></a>
+- **[ Check income statement per year ]**
+- **[ Search income statement by year ]**
 
-### `yarn build`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [Live Demo Link](https://musong-annual-report.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Project Presentation <a name="live-demo"></a>
 
-### `yarn eject`
+- [Live Presentation Link](https://www.loom.com/share/1dccca6a0a594c8d8aa7e5b674fc71e3)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💻 Getting Started <a name="getting-started"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Preriquisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Node version >= 14
 
-## Learn More
+### Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone this repository to your desired folder:
+sh
+  cd my-folder
+ git clone https://github.com/ernestmusong/Annual-Income-Report.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ### Install:
+ Run: npm install
 
-### Code Splitting
+ ### Start:
+ Run: npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+ ### Run tests:
+ Run: npm test
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+## 👥 Authors <a name="authors"></a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+👤 **Musong Ernest**
 
-### Advanced Configuration
+- GitHub: [@ernestmusong](https://github.com/ernestmusong)
+- Twitter: [@MusongAkeh](https://twitter.com/MusongAkeh)
+- LinkedIn: [Musong Ernest](https://www.linkedin.com/in/musongernestakeh/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## 🔭 Future Features <a name="future-features"></a>
 
-### `yarn build` fails to minify
+- [ ] **[I intend to add a dropdown list of companies]**
+ 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ernestmusong/Annual-Income-Report/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+If you like this project, give it a star please!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+ <ul>
+    <li><a href="https://www.microverse.org/">Microverse</a></li>
+  </ul>
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+ <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
