@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-  <h3><b>Annual Income Report</b></h3>
+  <h3><b>React Phone Store</b></h3>
 
 # 📗 Table of Contents
 
@@ -22,9 +22,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Annual Income Report] <a name="about-project"></a>
+# 📖 [React Phone Store] <a name="about-project"></a>
 
-**[Annual Income Report]** is a project at <a href='https://www.microverse.org/'>Microverse</a> module three.  It is a single page application that gives annual report on the income statements for the company "Apple Inc." for the past thirty-eight years (1985 till date)
+**[React Phone Store]** An E-commerce Web App that enables users to buy online.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -33,23 +33,21 @@
   <summary>Client</summary>
   <ul>
     <li><a href="#">Reactjs</a></li>
-    <li><a href="#">Redux</a></li>
+    <li><a href="#">Context Api</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
-- **[ Check income statement per year ]**
-- **[ Search income statement by year ]**
+- **[ Add cart items ]**
+- **[ Remove cart items ]**
+- **[ Clear cart ]**
+- **[ Calculate tax, Sub totals, and totals. ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://musong-annual-report.netlify.app/)
-
-## 🚀 Project Presentation <a name="live-demo"></a>
-
-- [Live Presentation Link](https://www.loom.com/share/1dccca6a0a594c8d8aa7e5b674fc71e3)
+- [Live Demo Link](https://musong-e-store.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,17 +62,13 @@ Node version >= 14
 Clone this repository to your desired folder:
 sh
   cd my-folder
- git clone https://github.com/ernestmusong/Annual-Income-Report.git
+ git clone https://github.com/ernestmusong/React-Phone-Store.git
 
  ### Install:
  Run: npm install
 
  ### Start:
  Run: npm start
-
- ### Run tests:
- Run: npm test
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +85,9 @@ sh
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[I intend to add a dropdown list of companies]**
+- [ ] **[Add checkout with paypal]**
+- [ ] **[Add categories]**
+- [ ] **[Add search products/categories]**
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +96,7 @@ sh
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ernestmusong/Annual-Income-Report/issues).
+Feel free to check the [issues page](https://github.com/ernestmusong/React-Phone-Store/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,15 +105,8 @@ If you like this project, give it a star please!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
- <ul>
-    <li><a href="https://www.microverse.org/">Microverse</a></li>
-  </ul>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
- <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+ This project is [MIT](./LICENSE.txt) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
