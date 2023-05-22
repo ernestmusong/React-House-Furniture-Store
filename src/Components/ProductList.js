@@ -1,27 +1,45 @@
-import React, { Component } from "react";
-import Product from "./Product";
-import Title from "./Title";
-import { ProductConsumer } from "../context";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-export default class ProductList extends Component {
-  render() {
+import { getProducts, populatateNewProducts } from 'redux/products/productsSlice';
+import Product from './Product';
+import Title from './Title';
+
+function ProductList() {
+  const dispatch = useDispatch();
+  const { products, isLoading, error } = useSelector((store) => store.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+    dispatch(populatateNewProducts());
+  }, [dispatch]);
+
+  if (isLoading) {
     return (
-      <React.Fragment>
-        <div className="py-5">
-          <div className="container">
-            <Title name="our" title="products" />
-            <div className="row">
-              <ProductConsumer>
-                {(value) => {
-                  return value.products.map((product) => {
-                    return <Product key={product.id} product={product} />;
-                  });
-                }}
-              </ProductConsumer>
-            </div>
-          </div>
-        </div>
-      </React.Fragment>
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
     );
   }
+  if (error) {
+    return (
+      <div className="error">
+        <h1>{error}</h1>
+      </div>
+    );
+  }
+  return (
+    <>
+      <div className="py-5">
+        <div className="container">
+          <Title name="our" title="products" />
+          <div className="row">
+            {products.map((product) => <Product key={product.id} item={product} />)}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
+
+export default ProductList;
