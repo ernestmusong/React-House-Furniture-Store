@@ -33,25 +33,24 @@ const productsSlice = createSlice({
     addToCart: (state, { payload }) => {
       const product = { ...state.products.find((x) => x.id === payload) };
       product.fields.inCart = true;
-      state.cartItems.push(product);
       return state;
     },
     clearCart: (state) => ({
       ...state,
-      cartItems: [],
+      products: [],
     }),
     removeItem: (state, { payload }) => ({
       ...state,
-      cartItems: [...state.cartItems.filter((item) => item.id !== payload)],
+      products: [...state.products.filter((item) => item.id !== payload)],
     }),
     increase: (state, { payload }) => {
-      const item = { ...state.cartItems.find((item) => item.id === payload) };
+      const item = { ...state.products.find((item) => item.id === payload) };
       item.fields.count += 1;
       item.fields.total = item.fields.price * item.fields.count;
       return state;
     },
     decrease: (state, { payload }) => {
-      const item = { ...state.cartItems.find((item) => item.id === payload) };
+      const item = { ...state.products.find((item) => item.id === payload) };
       item.fields.count -= 1;
       item.fields.total = item.fields.price * item.fields.count;
       return state;
@@ -68,8 +67,8 @@ const productsSlice = createSlice({
         products: [...action.payload.map((item) => {
           const itemCopy = { ...item };
           itemCopy.fields.inCart = false;
-          itemCopy.fields.total = 0;
-          itemCopy.fields.count = 0;
+          itemCopy.fields.total = item.fields.price;
+          itemCopy.fields.count = 1;
           return itemCopy;
         })],
         isLoading: false,
@@ -87,7 +86,6 @@ export const {
   removeItem,
   increase,
   decrease,
-  calculateTotals,
   addToCart,
 } = productsSlice.actions;
 
