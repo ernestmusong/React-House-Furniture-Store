@@ -1,27 +1,19 @@
-import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import ProductList from "./Components/ProductList";
-import Details from "./Components/Details";
-import Cart from "./Components/Cart/Cart";
-import Modal from "./Components/Modal";
-import Shop from "./Components/Shop";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from 'react-router-dom';
+import Layout from 'components/Layout';
+import Home from 'components/Home';
+import DetailsPage from 'components/DetailsPage';
+import Cart from 'components/Cart/Cart';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ModalPage from 'components/ModalPage';
 
-export default class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Navbar />
-          <Route exact path="/" component={ProductList} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/shop" component={Shop} />
-          <Modal path="/modal" component={Modal}/>
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="/detail/:id" element={<DetailsPage />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/modal/:id" element={<ModalPage />} />
+    </Route>
+  </Routes>
+);
+export default App;
