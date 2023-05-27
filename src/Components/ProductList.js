@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getProducts, populatateNewProducts } from 'redux/products/productsSlice';
+import { getProducts } from 'redux/products/productsSlice';
 import Product from './Product';
 import Title from './Title';
 
@@ -10,8 +10,7 @@ function ProductList() {
   const { products, isLoading, error } = useSelector((store) => store.products);
 
   useEffect(() => {
-    dispatch(getProducts());
-    dispatch(populatateNewProducts());
+    dispatch(getProducts('EQUIPMENT'));
   }, [dispatch]);
 
   if (isLoading) {

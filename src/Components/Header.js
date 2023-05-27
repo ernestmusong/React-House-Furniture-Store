@@ -24,9 +24,9 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const filteredItem = products.find((item) => item.name === searchQuery);
+    const filteredItem = products.find((item) => item.fields.name === searchQuery);
     if (filteredItem) {
-      navigate(`/product/${filteredItem.id}`);
+      navigate(`/detail/${filteredItem.id}`);
       setSearchQuery(''); // Clear the form
     }
   };
@@ -54,7 +54,7 @@ const Header = () => {
               <div className="iconWrap">
                 <FaAngleLeft />
               </div>
-              <h4 style={{ fontSize: '1rem', color: '#fff' }}>AAPL</h4>
+              <h4 style={{ fontSize: '1rem', color: '#fff' }}>EQUIPMENT</h4>
             </NavLink>
           </div>
           <form className="search-wrapper" onSubmit={handleSubmit}>

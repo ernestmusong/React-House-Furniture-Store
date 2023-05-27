@@ -2,16 +2,8 @@ import React from 'react';
 import '../styles/Modal.css';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { closeModal } from 'redux/products/productsSlice';
-import { useSelector } from 'react-redux';
-import Button from './Button';
 
-function Modal(props) {
-  const { modalOpen } = useSelector((store) => store.products);
-  const { item } = props;
-  if (!modalOpen) {
-    return null;
-  }
+function Modal({ detail }) {
   return (
     <>
       <div className="modalContainer">
@@ -22,19 +14,19 @@ function Modal(props) {
               className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5 "
             >
               <h5>item added to the cart</h5>
-              <img src={item.img} alt="" className="img-fluid" />
-              <h5>{item.title}</h5>
+              <img src={detail.fields.image[0].url} alt="" className="img-fluid" />
+              <h5>{detail.fields.name}</h5>
               <h5 className="text-muted">
                 price :
-                {item.price}
+                {detail.fields.price}
                 {' '}
                 cfa
               </h5>
               <NavLink to="/">
-                <Button className="mainYellow" text="add to cart" onClick={() => closeModal()} />
+                <button className="button lightBlue" type="button">back to products</button>
               </NavLink>
               <NavLink to="/cart">
-                <Button className="lightBlue" text="go to cart" cart onClick={() => closeModal()} />
+                <button className="button mainYellow" type="button">go to cart</button>
               </NavLink>
             </div>
           </div>
@@ -46,7 +38,7 @@ function Modal(props) {
 }
 
 Modal.propTypes = {
-  item: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  detail: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 export default Modal;

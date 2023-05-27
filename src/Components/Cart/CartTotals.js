@@ -1,9 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from 'redux/products/productsSlice';
-import { NavLink } from 'react-router-dom';
 
 function CartTotals() {
+  const dispatch = useDispatch();
   const {
     cartSubTotal,
     cartTax,
@@ -14,15 +14,15 @@ function CartTotals() {
       <div className="container bg-red">
         <div className="row">
           <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
-            <NavLink to="/">
-              <button
-                className="btn btn-outline-danger text-uppercase mb-3 px-5"
-                type="button"
-                onClick={() => clearCart()}
-              >
-                clear cart
-              </button>
-            </NavLink>
+            <button
+              className="btn btn-outline-danger text-uppercase mb-3 px-5"
+              type="button"
+              onClick={() => {
+                dispatch(clearCart());
+              }}
+            >
+              clear cart
+            </button>
             <h5>
               <span className="title-text">subtotal :</span>
               <strong>

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import CartItem from './CartItem';
 
 export default function CartList() {
-  const { cartItems } = useSelector((store) => store.cartItems);
+  const { cartItems } = useSelector((store) => store.products);
 
   return (
     <div className="container-fluid">

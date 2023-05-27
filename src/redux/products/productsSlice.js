@@ -6,7 +6,6 @@ const url = 'https://course-api.com/javascript-store-products';
 const initialState = {
   products: [],
   cartItems: [],
-  modalOpen: false,
   cartSubTotal: 0,
   cartTotol: 0,
   cartTax: 0,
@@ -31,46 +30,32 @@ const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    populatateNewProducts: (state) => {
-      state.products.forEach((item) => {
-        const newItem = {
-          ...item, inCart: false, count: 0, total: 0,
-        };
-        const newProducts = state.newProducts.push(newItem);
-        return newProducts;
-      });
-    },
-    addToCart: (state, action) => {
-      const item = state.newProducts.find((item) => item.id === action.payload.id);
-      const newItem = { ...item, inCart: true };
-      state.cartItems.push(newItem);
-      return state.cartItems;
+    addToCart: (state, { payload }) => {
+      const product = { ...state.products.find((x) => x.id === payload) };
+      product.fields.inCart = true;
+      state.cartItems.push(product);
+      return state;
     },
     clearCart: (state) => ({
       ...state,
       cartItems: [],
     }),
-    removeItem: (state, action) => ({
+    removeItem: (state, { payload }) => ({
       ...state,
-      cartItems: state.cartItems.filter((item) => item.id !== action.payload.id),
+      cartItems: [...state.cartItems.filter((item) => item.id !== payload)],
     }),
     increase: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.count += 1;
+      const item = { ...state.cartItems.find((item) => item.id === payload) };
+      item.fields.count += 1;
+      item.fields.total = item.fields.price * item.fields.count;
+      return state;
     },
     decrease: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount -= 1;
+      const item = { ...state.cartItems.find((item) => item.id === payload) };
+      item.fields.count -= 1;
+      item.fields.total = item.fields.price * item.fields.count;
+      return state;
     },
-    openModal: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount -= 1;
-    },
-    closeModal: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount -= 1;
-    },
-
   },
   extraReducers: (builder) => {
     builder
@@ -83,8 +68,8 @@ const productsSlice = createSlice({
         products: [...action.payload.map((item) => {
           const itemCopy = { ...item };
           itemCopy.fields.inCart = false;
-          itemCopy.total = 0;
-          itemCopy.count = 0;
+          itemCopy.fields.total = 0;
+          itemCopy.fields.count = 0;
           return itemCopy;
         })],
         isLoading: false,
@@ -103,9 +88,6 @@ export const {
   increase,
   decrease,
   calculateTotals,
-  populatateNewProducts,
-  openModal,
-  closeModal,
   addToCart,
 } = productsSlice.actions;
 
