@@ -62,7 +62,7 @@ Node version >= 14
 Clone this repository to your desired folder:
 sh
   cd my-folder
- git clone https://github.com/ernestmusong/React-Phone-Store.git
+ git clone https://github.com/ernestmusong/React-House-Furniture-Store.git
 
  ### Install:
  Run: npm install
@@ -96,7 +96,7 @@ sh
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ernestmusong/React-Phone-Store/issues).
+Feel free to check the [issues page](https://github.com/ernestmusong/React-House-Furniture-Store/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
