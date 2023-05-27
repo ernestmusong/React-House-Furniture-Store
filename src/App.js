@@ -10,9 +10,9 @@ const App = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="/detail/:id" element={<DetailsPage />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/modal/:id" element={<ModalPage />} />
+      <Route path="detail/:id" element={<DetailsPage />} />
+      <Route path="cart" element={<Cart />} />
+      <Route path="modal/:id" element={<ModalPage />} />
     </Route>
   </Routes>
 );
