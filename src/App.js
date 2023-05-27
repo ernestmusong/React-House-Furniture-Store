@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from 'components/Layout';
-import Home from 'components/Home';
-import DetailsPage from 'components/DetailsPage';
-import Cart from 'components/Cart/Cart';
+import Layout from 'Components/Layout';
+import Home from 'Components/Home';
+import DetailsPage from 'Components/DetailsPage';
+import Cart from 'Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalPage from 'components/ModalPage';
+import ModalPage from 'Components/ModalPage';
 
 const App = () => (
   <Routes>
