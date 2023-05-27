@@ -19,6 +19,10 @@ body {
   color: var(--mainDark) !important;
 }
 
+.top-nav {
+  display: none;
+}
+
 .loading {
   text-align: center;
   margin-top: 50vh;
@@ -28,10 +32,9 @@ body {
 
 .navbar {
   height: auto;
-
-  /* display: block; */
   padding-left: 0;
   padding-right: 0;
+  top: 0;
 }
 
 .lower-nav {
