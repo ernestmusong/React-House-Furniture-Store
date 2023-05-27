@@ -24,10 +24,11 @@ body {
   margin-top: 50vh;
 }
 
- /* ---------------------------------------NAVBAR----------------- */
+/* ---------------------------------------NAVBAR----------------- */
 
 .navbar {
   height: auto;
+
   /* display: block; */
   padding-left: 0;
   padding-right: 0;
@@ -112,6 +113,7 @@ body {
 .text-bright {
   color: var(--lightBlue);
 }
+
 .btn-black {
   background: transparent;
   text-transform: capitalize;
@@ -120,6 +122,7 @@ body {
   border-radius: 0 !important;
   border: 0.1rem solid var(--mainDark) !important;
 }
+
 .btn-black:hover {
   background: var(--mainDark) !important;
   color: var(--mainWhite) !important;
@@ -128,14 +131,14 @@ body {
 .cart-container {
   margin-right: 20px;
 }
-.cart-wrapper{
+
+.cart-wrapper {
   position: relative;
   cursor: pointer;
 }
 
 .cart-icon,
 .deleteBtn {
-  
   font-size: 1.5rem;
   color: var(--mainWhite) !important;
   cursor: pointer;
@@ -145,9 +148,10 @@ body {
   color: var(--dark-red) !important;
   border: none;
 }
-.total-items{
+
+.total-items {
   position: absolute;
-  top:-8px;
+  top: -8px;
   right: -16px;
   display: grid;
   place-items: center;
@@ -174,7 +178,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-     
   }
 
   .top-nav ul {
