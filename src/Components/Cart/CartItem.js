@@ -28,7 +28,7 @@ function CartItem(props) {
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div className="d-flex justify-content-center">
           <div>
-            <button type="button" className="btn btn-black mx-1" onClick={() => dispatch(decrease(item.id))}>
+            <button disabled={item.fields.count === 1} type="button" className="btn btn-black mx-1" onClick={() => dispatch(decrease(item.id))}>
               -
             </button>
             <button type="button" className="btn btn-black mx-1">{item.fields.count}</button>
@@ -46,7 +46,9 @@ function CartItem(props) {
       <div className="col-10 mx-auto col-lg-2 text-capitalize">
         <strong>
           total :
+          { ' ' }
           {item.fields.total}
+          { ' ' }
           cfa
         </strong>
       </div>

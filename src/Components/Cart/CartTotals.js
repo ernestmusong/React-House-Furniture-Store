@@ -4,11 +4,13 @@ import { clearCart } from 'redux/products/productsSlice';
 
 function CartTotals() {
   const dispatch = useDispatch();
-  const {
-    cartSubTotal,
-    cartTax,
-    cartTotal,
-  } = useSelector((store) => store.products);
+  const { products } = useSelector((store) => store.products);
+  const selectItems = products.filter((elem) => elem.fields.inCart === true);
+  const totals = selectItems.map((item) => item.fields.total);
+  const subTotal = totals.reduce((a, b) => a + b);
+  const tempTax = subTotal * 0.1;
+  const tax = parseFloat(tempTax.toFixed(2));
+  const total = subTotal + tax;
   return (
     <>
       <div className="container bg-red">
@@ -27,7 +29,7 @@ function CartTotals() {
               <span className="title-text">subtotal :</span>
               <strong>
                 {' '}
-                {cartSubTotal}
+                {subTotal}
                 {' '}
                 cfa
               </strong>
@@ -36,7 +38,7 @@ function CartTotals() {
               <span className="title-text">tax :</span>
               <strong>
                 {' '}
-                {cartTax}
+                {tax}
                 {' '}
                 cfa
               </strong>
@@ -45,7 +47,7 @@ function CartTotals() {
               <span className="title-text">total :</span>
               <strong>
                 {' '}
-                {cartTotal}
+                {total}
                 {' '}
                 cfa
               </strong>

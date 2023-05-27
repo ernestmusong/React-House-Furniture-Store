@@ -7,7 +7,8 @@ import CartList from './CartList';
 import CartTotals from './CartTotals';
 
 function Cart() {
-  const { cartItems } = useSelector((store) => store.products);
+  const { products } = useSelector((store) => store.products);
+  const cartItems = products.filter((item) => item.fields.inCart === true);
   if (cartItems.length === 0) {
     return <Empty />;
   }
