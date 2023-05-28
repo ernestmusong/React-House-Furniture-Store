@@ -44,7 +44,11 @@ function Details({ detail }) {
               <span>cfa</span>
             </strong>
           </h4>
-
+          <p className="text-muted lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco
+          </p>
           {/* buttons */}
           <div>
             <NavLink to="/">
