@@ -25,9 +25,9 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const filteredItem = products.find((item) => item.fields.name === searchQuery);
-    if (filteredItem) {
-      navigate(`/detail/${filteredItem.id}`);
+    const match = products.find((x) => x.fields.name.toLowerCase() === searchQuery.toLowerCase());
+    if (match) {
+      navigate(`/detail/${match.id}`);
       setSearchQuery(''); // Clear the form
     }
   };
