@@ -140,7 +140,7 @@ body {
 }
 
 .cart-container {
-  margin-right: 4rem;
+  margin-right: 0.5rem;
 }
 
 .cart-wrapper {
@@ -169,9 +169,13 @@ body {
   border-radius: 50px;
   width: 25px;
   height: 25px;
-  background: var(--mainWhite);
-  color: var(--mainDark);
+  color: var(--mainWhite);
   font-size: 1rem;
+}
+
+.empty,
+.loading {
+  height: calc(100vh - 60px);
 }
 
 /* -----------------------------------------------MEDIA QUERIES----------------- */
@@ -179,6 +183,11 @@ body {
 @media screen and (min-width: 768px) {
   header {
     height: 100vh;
+  }
+
+  .empty,
+  .loading {
+    height: calc(100vh - 160px);
   }
 
   .top-nav {
@@ -226,5 +235,9 @@ body {
   .top-nav-social a {
     color: var(--main-white);
     text-decoration: none;
+  }
+
+  .cart-container {
+    margin-right: 4rem;
   }
 }
