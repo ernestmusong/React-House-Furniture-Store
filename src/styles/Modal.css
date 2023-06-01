@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,4 +16,10 @@
 
 #modal {
   background: var(--mainWhite);
+}
+
+@media screen and (min-width: 768px) {
+  #modal {
+    height: calc(100vh - 110px);
+  }
 }

@@ -35,6 +35,7 @@ const Header = () => {
   return (
     <>
       <nav className="navbar" data-testid="header-container">
+        {/* Top nav */}
         <div className="top-nav">
           <ul>
             <li className="top-nav-item"><NavLink className="nav_link" to="/">Home</NavLink></li>
@@ -49,7 +50,8 @@ const Header = () => {
             <li className="top-nav-item"><NavLink className="nav_link" to="/">login</NavLink></li>
           </ul>
         </div>
-        <div className="lower-nav">
+        {/* Mid nav */}
+        <div className="mid-nav">
           <div className="logo" data-testid="logo">
             <NavLink to="/" style={{ display: 'flex', textDecoration: 'none' }}>
               <div className="iconWrap">
@@ -84,6 +86,20 @@ const Header = () => {
 
             </div>
           </NavLink>
+        </div>
+        {/* Bottom nav */}
+        <div className="top-nav bottomNav">
+          <ul>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+          </ul>
         </div>
       </nav>
     </>
