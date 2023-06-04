@@ -13,7 +13,7 @@ function Product(props) {
     return null;
   }
   return (
-    <article className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+    <article className="mx-auto col-md-6 col-lg-3 mt-3">
       <div className="card">
         <div className="img-container">
           <NavLink to={`/detail/${item.id}`}>

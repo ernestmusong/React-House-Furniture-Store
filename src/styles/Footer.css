@@ -14,7 +14,10 @@
 }
 
 .footer {
-  background: var(--main-black) !important;
+  background: var(--main-black);
+  left: 0;
+  right: 0;
+  bottom: 0 !important;
 }
 
 .nav-and-footer-p {
