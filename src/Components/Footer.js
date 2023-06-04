@@ -6,7 +6,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="container-fluid footer py-4">
+    <footer className="container-fluid footer d-flex flex-column align-items-center py-4">
       <div className="row row-80 d-flex justify-content-around align-items-center">
         {/* footer first child */}
         <div className="col mr-4">
