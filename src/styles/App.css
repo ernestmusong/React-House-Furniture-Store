@@ -182,7 +182,6 @@ body {
 /* -----------------------------------------------MEDIA QUERIES----------------- */
 
 @media screen and (min-width: 768px) {
- 
   .empty,
   .loading {
     height: calc(100vh - 160px);
