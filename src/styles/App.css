@@ -17,18 +17,14 @@
 html,
 body {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Oswald", sans-serif !important;
   background: var(--mainWhite);
   color: var(--mainDark) !important;
-}
-
-.top-nav {
-  display: none;
 }
 
 .loading {
@@ -39,10 +35,15 @@ body {
 /* ---------------------------------------NAVBAR----------------- */
 
 .navbar {
-  height: auto;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0 !important;
+  left: 0;
+  right: 0;
   top: 0;
+}
+
+.top-nav {
+  display: none;
+  top: 0 !important;
 }
 
 .mid-nav {
@@ -181,10 +182,6 @@ body {
 /* -----------------------------------------------MEDIA QUERIES----------------- */
 
 @media screen and (min-width: 768px) {
-  header {
-    height: 100vh;
-  }
-
   .empty,
   .loading {
     height: calc(100vh - 160px);

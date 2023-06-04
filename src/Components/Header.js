@@ -35,7 +35,6 @@ const Header = () => {
   return (
     <>
       <nav className="navbar" data-testid="header-container">
-        {/* Top nav */}
         <div className="top-nav">
           <ul>
             <li className="top-nav-item"><NavLink className="nav_link" to="/">Home</NavLink></li>
