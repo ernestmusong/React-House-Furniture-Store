@@ -1,12 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from 'redux/products/productsSlice';
+import { useDispatch } from 'react-redux';
 
 function CartTotals() {
   const dispatch = useDispatch();
-  const { products } = useSelector((store) => store.products);
-  const selectItems = products.filter((elem) => elem.fields.inCart === true);
-  const totals = selectItems.map((item) => item.fields.total);
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  const totals = cartItems.map((item) => item.fields.total);
   const subTotal = totals.reduce((a, b) => a + b);
   const tempTax = subTotal * 0.1;
   const tax = parseFloat(tempTax.toFixed(2));

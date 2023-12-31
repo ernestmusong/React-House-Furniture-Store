@@ -31,8 +31,11 @@ const productsSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, { payload }) => {
+      const filtered = [];
       const product = { ...state.products.find((x) => x.id === payload) };
       product.fields.inCart = true;
+      filtered.push(product);
+      localStorage.setItem('cartItems', JSON.stringify(filtered));
       return state;
     },
     clearCart: (state) => ({

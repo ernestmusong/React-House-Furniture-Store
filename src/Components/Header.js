@@ -15,7 +15,7 @@ import { useNavigate, NavLink } from 'react-router-dom';
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const { products } = useSelector((store) => store.products);
-  const cartItems = products.filter((item) => item.fields.inCart === true);
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
   const navigate = useNavigate();
 
   const handleChange = (e) => {
