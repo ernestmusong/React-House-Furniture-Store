@@ -25,6 +25,7 @@ function Product(props) {
             disabled={!!item.fields.inCart}
             onClick={() => {
               dispatch(addToCart(item.id));
+              navigate(`/modal/${item.id}`);
             }}
           >
             {item.fields.inCart === true ? (
