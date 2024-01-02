@@ -31,7 +31,7 @@ function ProductList() {
     <>
       <div className="py-5">
         <div className="container">
-          <Title name="our" title="products" />
+          <Title name="our" title="collections" />
           <div className="row">
             {products.map((product) => <Product key={product.id} item={product} />)}
           </div>

@@ -1,19 +1,23 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import DetailsPage from './components/DetailsPage';
-import Cart from './components/Cart/Cart';
+import Layout from 'Components/Layout';
+import Home from 'Components/Home';
+import DetailsPage from 'Components/DetailsPage';
+import Cart from 'Components/Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalPage from './components/ModalPage';
+import ModalPage from 'Components/ModalPage';
+import Footer from 'Components/Footer';
 
 const App = () => (
-  <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="/detail/:id" element={<DetailsPage />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/modal/:id" element={<ModalPage />} />
-    </Route>
-  </Routes>
+  <>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="detail/:id" element={<DetailsPage />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="modal/:id" element={<ModalPage />} />
+      </Route>
+    </Routes>
+    <Footer />
+  </>
 );
 export default App;

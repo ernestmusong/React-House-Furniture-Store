@@ -1,0 +1,43 @@
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f0f0f0;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+  --dark-red: #ff545b;
+  --light-red: #ff6c73;
+  --dark-blue: #6a5acd;
+  --light-blue: #7b68ee;
+  --medium-purple: #9370db;
+  --main-black: #272a31;
+  --softGrey: #acaea9;
+}
+
+.footer {
+  background: var(--main-black);
+  left: 0;
+  right: 0;
+  bottom: 0 !important;
+}
+
+.nav-and-footer-p {
+  color: var(--softGrey);
+}
+
+@media (min-width: 992px) {
+  .inner-footer-child {
+    width: 20% !important;
+  }
+
+  footer .copyright-child {
+    width: 20% !important;
+  }
+
+  .contact-links {
+    display: flex;
+  }
+
+  .carousel-caption h1 {
+    font-size: 3rem !important;
+  }
+}

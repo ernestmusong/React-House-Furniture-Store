@@ -1,3 +1,18 @@
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f0f0f0;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+  --dark-red: #ff545b;
+  --light-red: #ff6c73;
+  --dark-blue: #6a5acd;
+  --light-blue: #7b68ee;
+  --medium-purple: #9370db;
+  --main-black: #272a31;
+  --softGrey: #acaea9;
+}
+
 .card {
   border-color: transparent;
   transition: all 0.3s linear;
@@ -36,7 +51,7 @@ article:hover.card-footer {
   bottom: 0;
   right: 0;
   padding: 0.2rem 0.4rem;
-  background: var(--lightBlue);
+  background: var(--main-black);
   border: none;
   color: var(--mainWhite);
   font-size: 1.4rem;
@@ -45,11 +60,35 @@ article:hover.card-footer {
   transition: all 0.3s linear;
 }
 
-.cart-btn:hover {
-  color: var(--mainBlue);
+.showBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.2rem 0.4rem;
+  background: var(--main-black);
+  border: none;
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  border-radius: 0 0 0.5rem 0;
+  transform: translate(-100%, -100%);
+  transition: all 0.3s linear;
+}
+
+.cart-btn:hover,
+.showBtn:hover {
+  color: var(--main-black);
+  background: var(--mainWhite);
   cursor: pointer;
 }
 
 .img-container:hover .cart-btn {
   transform: translate(0, 0);
+}
+
+.img-container:hover .showBtn {
+  transform: translate(0, 0);
+}
+
+.hideBtn {
+  display: none;
 }

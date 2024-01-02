@@ -10,7 +10,7 @@ function Details({ detail }) {
   return (
     <div className="container py-5">
       <div className="row">
-        <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
+        <div className="col-10 mx-auto text-center text-slanted text-blue text-uppercase my-5">
           <h1>{detail.fields.name}</h1>
         </div>
       </div>
@@ -44,7 +44,11 @@ function Details({ detail }) {
               <span>cfa</span>
             </strong>
           </h4>
-
+          <p className="text-muted lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco
+          </p>
           {/* buttons */}
           <div>
             <NavLink to="/">

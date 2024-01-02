@@ -25,9 +25,9 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const filteredItem = products.find((item) => item.fields.name === searchQuery);
-    if (filteredItem) {
-      navigate(`/detail/${filteredItem.id}`);
+    const match = products.find((x) => x.fields.name.toLowerCase() === searchQuery.toLowerCase());
+    if (match) {
+      navigate(`/detail/${match.id}`);
       setSearchQuery(''); // Clear the form
     }
   };
@@ -49,7 +49,8 @@ const Header = () => {
             <li className="top-nav-item"><NavLink className="nav_link" to="/">login</NavLink></li>
           </ul>
         </div>
-        <div className="lower-nav">
+        {/* Mid nav */}
+        <div className="mid-nav">
           <div className="logo" data-testid="logo">
             <NavLink to="/" style={{ display: 'flex', textDecoration: 'none' }}>
               <div className="iconWrap">
@@ -84,6 +85,20 @@ const Header = () => {
 
             </div>
           </NavLink>
+        </div>
+        {/* Bottom nav */}
+        <div className="top-nav bottomNav">
+          <ul>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+            <li className="top-nav-item"><NavLink className="nav_link" to="/">category</NavLink></li>
+          </ul>
         </div>
       </nav>
     </>

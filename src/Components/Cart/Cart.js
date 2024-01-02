@@ -14,14 +14,12 @@ function Cart() {
   }
   return (
     <section>
-
       <div>
         <Title name="your" title="cart" />
         <CartColumns />
         <CartList />
         <CartTotals />
       </div>
-
     </section>
   );
 }

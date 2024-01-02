@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import '../styles/Product.css';
 import PropTypes from 'prop-types';
@@ -7,12 +7,13 @@ import { addToCart } from 'redux/products/productsSlice';
 
 function Product(props) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { item } = props;
   if (!item) {
     return null;
   }
   return (
-    <article className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+    <article className="mx-auto col-md-6 col-lg-3 mt-3">
       <div className="card">
         <div className="img-container">
           <NavLink to={`/detail/${item.id}`}>
@@ -24,6 +25,7 @@ function Product(props) {
             disabled={!!item.fields.inCart}
             onClick={() => {
               dispatch(addToCart(item.id));
+              navigate(`/modal/${item.id}`);
             }}
           >
             {item.fields.inCart === true ? (
@@ -36,8 +38,16 @@ function Product(props) {
 
                 add to cart
               </p>
-            // <i className="fas fa-cart-plus" />
             )}
+          </button>
+          <button
+            type="button"
+            className={item.fields.inCart === true ? 'showBtn' : 'hideBtn'}
+            onClick={() => {
+              navigate('/cart');
+            }}
+          >
+            <p className="text-capitalize mb-0">go to cart</p>
           </button>
         </div>
         {/* card footer */}
